@@ -1,13 +1,23 @@
 import cv2
 from train_model import new,view
+import os
 
-# digit.jpg , numbers.png , [nums.png] , im.jpg , index.jpg ,photo_2.jpg , 2.png
-image = cv2.imread('test_images/digit.jpg')
-padd = 10
+
 
 
 if __name__ == '__main__':
-    new(image, padd)
-    view(image, padd)
+    folder_path = 'test_images/Segmented image/'
+    padd = 10
+
+    # Loop through all files in the folder
+    for filename in os.listdir(folder_path):
+        if filename.lower().endswith(('.png', '.jpg', '.jpeg')):
+            # Read the image
+            image_path = os.path.join(folder_path, filename)
+            image = cv2.imread(image_path)
+
+            # Process the image using the new and view functions
+            new(image, padd)
+            view(image, padd)
 
 

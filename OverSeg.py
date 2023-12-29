@@ -48,7 +48,7 @@ def craft_text_detection(image_path, output_path):
 
 if __name__ == '__main__':
     # Specify the path to your local image
-    input_image_path = 'test_images/Trials.jpg'
+    input_image_path = 'test_images/digit.jpg'
 
     # Specify the path for saving the output image with bounding boxes
     output_image_path = 'test_images/Segmented image'

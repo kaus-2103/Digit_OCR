@@ -89,7 +89,7 @@ def get_string(arr):
             if type(arr[x][y]) == list:
                 dd.append(arr[x][y][0])
 
-    print("the numers in the image are :")
+    print("the numbers in the image are :")
     print(', '.join(str(x) for x in dd))
 
 
